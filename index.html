@@ -15,18 +15,23 @@
 
 <p>Test cases for SVG accessibility, with and without ARIA.</p>
 
+<h3>Basic SVG elements</h3>
 <ul>
-<li><a href="rect.html">A rectangle</a></li>
-<li><a href="rect-title.html">A rectangle with a <code>title</code></a></li>
-<li><a href="rect-title-desc.html">A rectangle with a <code>title</code> and a <code>desc</code></a></li>
-<li><a href="rec-roleimg-title-desc.html">SVG with <code>role="img"</code>, a <code>title</code> and a <code>desc</code></a></li>
-<li><a href="svg-labelledby-title-desc-rect.html">SVG with a <code>title</code> associated using <code>aria-labelledby</code> and a <code>desc</code></a></li>
-<li><a href="svg-roleimg-labelledby-describedby-title-desc-rect.html">SVG with <code>role="img"</code>, a <code>title</code> associated using <code>aria-labelledby</code> and a <code>desc</code> associated using <code>aria-describedby</code></a></li>
-<li><a href="svg-rolegroup-title-desc.html">SVG with <code>role="group"</code>, a <code>title</code> and a <code>desc</code></a></li>
-<li><a href="svg-rolegroup-labelledby-describedby-title-desc-rect.html">SVG with <code>role="group"</code>, a <code>title</code> associated using <code>aria-labelledby</code> and a <code>desc</code> associated using <code>aria-describedby</code></a></li>
-<li><a href="plain-svg-text.html">Plain SVG text</a></li>
-<li><a href="rotated-text.html">Rotated text</a></li>
+<li><a href="rect.html">&lt;rect&gt;</a></li>
+<li><a href="title.html">&lt;title&gt;</a></li>
+<li><a href="desc.html">&lt;desc&gt;</a></li>
+<li><a href="text.html">&lt;text&gt;</a></li>
+<li><a href="text-rotation.html">&lt;text&gt; + rotation</a></li>
 </ul>
+
+<h3>With ARIA</h3>
+<ul>
+<li><a href="svg-title-aria-labelledby-desc-aria-describedby.html">&lt;svg&gt;, &lt;title&gt; + aria-labelledby, and &lt;desc&gt; + aria-describedby</a></li>
+
+<li><a href="svg-role-group-title-desc.html">&lt;svg&gt; + role="group, &lt;title&gt; and &lt;desc&gt;</a></li>
+<li><a href="svg-role-group-title-aria-labelledby-desc-aria-describedby.html">&lt;svg&gt; + role="group", &lt;title&gt; + aria-labelledby, and &lt;desc&gt; + aria-describedby</a></li>
+<li><a href="svg-role-img-title-desc.html">&lt;svg&gt; + role="img", &lt;title&gt; and &lt;desc&gt;</a></li>
+<li><a href="svg-role-img-title-aria-labelledby-desc-aria-describedby.html">&lt;svg&gt; + role="img", &lt;title&gt; + aria-labelledby, and &lt;desc&gt; + aria-describedby</a></li>
 
 </body>
 </html>
