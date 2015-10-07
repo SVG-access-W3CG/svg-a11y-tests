@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Case: &lt;use&gt; labelledby &lt;title&gt; describedby &lt;desc&gt;</title>
+
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+</head>
+
+<body>
+<h1>Case: &lt;use&gt; aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</h1>
+
+<p>The <code>&lt;svg&gt;</code> element defines a group containing a <code>&lt;title&gt;</code>, a <code>&lt;desc&gt;</code> and a <code>&lt;rect&gt;</code> in a <code>&lt;defs&gt;</code> element. The rectangle is then incorporated into the document with a <code>&lt;use&gt;</code> element</p>
+
+<p>For a user agent to pass this test, it must be possible to navigate to the rectangle and discover the title, which is "Rectangle", and to get the description, which is "A lilac rectangle".</p>
+
+<svg width="250" height="100">
+ <defs>
+  <g id="theRect">
+   <title id="c2title">Rectangle</title>
+   <desc id="c2desc">A lilac rectangle</desc>
+   <rect x="0" y="0" width="100%" height="100%" style="fill: #c8a2c8;" />
+  </g>
+ </defs>
+ <use xlink:href="#theRect"/>
+</svg>
+
+</body>
+</html>
