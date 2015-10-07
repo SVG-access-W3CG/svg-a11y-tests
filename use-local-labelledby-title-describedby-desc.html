@@ -13,7 +13,7 @@
 <body>
 <h1>Case: &lt;use&gt; aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</h1>
 
-<p>The <code>&lt;svg&gt;</code> element defines a group containing a <code>&lt;title&gt;</code>, a <code>&lt;desc&gt;</code> and a <code>&lt;rect&gt;</code> in a <code>&lt;defs&gt;</code> element. The <code>title</code> and <code>desc</code> are explicitly associated to the group with <code>aria-labelledby</code> <code>aria-describedby</code> attributes, respectively. The rectangle is then incorporated into the document with a <code>&lt;use&gt;</code> element</p>
+<p>The <code>&lt;svg&gt;</code> element defines a group containing a  a <code>&lt;rect&gt;</code> in a <code>&lt;defs&gt;</code> element. The rectangle is then incorporated into the document with a <code>&lt;use&gt;</code> element containing a <code>&lt;title&gt;</code>, and a <code>&lt;desc&gt;</code>, explicitly associated to the <code>&lt;use&gt;</code> with <code>aria-labelledby</code> and <code>aria-describedby</code> attributes, respectively.</p>
 
 <p>For a user agent to pass this test, it must be possible to navigate to the rectangle and discover the title, which is "Rectangle", and to get the description, which is "A lilac rectangle".</p>
 
