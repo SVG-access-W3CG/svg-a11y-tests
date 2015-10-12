@@ -15,6 +15,9 @@
 
 <p>Test cases for SVG accessibility, with and without ARIA.</p>
 
+<h2>Atomic tests</h2>
+<p>Simple tests, of one thing at a time. There are some more complex examples under development in the <a href="http://github.com/SVG-access-W3CG/use-case-examples">use-case-examples</a> repository. The examples that have been improved for accessibility are <a href="#use-case-examples">listed below</a>.</p>
+
 <h3>Basic SVG elements</h3>
 <ul>
 <li><a href="rect.html">&lt;rect&gt;</a></li>
@@ -35,17 +38,28 @@
 
 <h3>Basic <code>&lt;defs&gt;</code> and <code>&lt;use&gt;</code></h3>
 <ul>
-<li><a href="defs-title-norender.html">&lt;defs&gt; &lt;title&gt; Not Rendered</a></li>
-<li><a href="defs-labelledby-title-norender.html">&lt;defs&gt; aria-labelledby &lt;title&gt; Not Rendered</a></li>
-<li><a href="defs-labelledby-title-hidden-norender.html">&lt;defs&gt; aria-labelledby &lt;title&gt; aria-hidden Not Rendered</a></li>
-<li><a href="use-title">&lt;use&gt; with the &lt;defs&gt; including &lt;title&gt;</a></li>
-<li><a href="use-title-desc.html">&lt;use&gt; with the &lt;defs&gt; including &lt;title&gt; + &lt;desc&gt;</a></li>
-<li><a href="use-labelledby-title.html">&lt;use&gt; with the &lt;defs&gt; aria-labelledby &lt;title&gt;</a></li>
-<li><a href="use-labelledby-title-describedby-desc.html">&lt;use&gt; with the &lt;defs&gt; aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</a></li>
-<li><a href="use-local-title">&lt;use&gt; element with &lt;title&gt;</a></li>
-<li><a href="use-local-title-desc.html">&lt;use&gt; element with &lt;title&gt; + &lt;desc&gt;</a></li>
-<li><a href="use-local-labelledby-title.html">&lt;use&gt; element aria-labelledby &lt;title&gt;</a></li>
-<li><a href="use-local-labelledby-title-describedby-desc.html">&lt;use&gt; element aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</a></li>
+  <li><a href="defs-title-norender.html">&lt;defs&gt; &lt;title&gt; Not Rendered</a></li>
+  <li><a href="defs-labelledby-title-norender.html">&lt;defs&gt; aria-labelledby &lt;title&gt; Not Rendered</a></li>
+  <li><a href="defs-labelledby-title-hidden-norender.html">&lt;defs&gt; aria-labelledby &lt;title&gt; aria-hidden Not Rendered</a></li>
+  <li><a href="use-title">&lt;use&gt; with the &lt;defs&gt; including &lt;title&gt;</a></li>
+  <li><a href="use-title-desc.html">&lt;use&gt; with the &lt;defs&gt; including &lt;title&gt; + &lt;desc&gt;</a></li>
+  <li><a href="use-labelledby-title.html">&lt;use&gt; with the &lt;defs&gt; aria-labelledby &lt;title&gt;</a></li>
+  <li><a href="use-labelledby-title-describedby-desc.html">&lt;use&gt; with the &lt;defs&gt; aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</a></li>
+  <li><a href="use-local-title">&lt;use&gt; element with &lt;title&gt;</a></li>
+  <li><a href="use-local-title-desc.html">&lt;use&gt; element with &lt;title&gt; + &lt;desc&gt;</a></li>
+  <li><a href="use-local-labelledby-title.html">&lt;use&gt; element aria-labelledby &lt;title&gt;</a></li>
+  <li><a href="use-local-labelledby-title-describedby-desc.html">&lt;use&gt; element aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</a></li>
+</ul>
+
+<h3>SVG animations</h3>
+<p>Note that as of 2015 No version of IE / Edge nor Opera Mini supports animation. Most other implementations, including all the old tiny mobile browsers, do.
+<ul>
+<li><a href="animate-accesskey-polygon-points.html">animate-accesskey-polygon-points</a></li>
+<li><a href="animate-click-polygon-points.html">animate-click-polygon-points</a></li>
+<li><a href="animate-keydown-polygon-points.html">animate-keydown-polygon-points</a></li>
+<li><a href="set-accesskey-aria-label.html">set-accesskey-aria-label</a></li>
+<li><a href="set-labelledby-defs-title.html">set-labelledby-defs-title</a></li>
+<li><a href="set-use-text-accesskey.html">set-use-text-accesskey</a></li>
 </ul>
 
 <h3>With ARIA</h3>
@@ -57,5 +71,12 @@
 <li><a href="svg-role-img-title-desc.html">&lt;svg&gt; + role="img", &lt;title&gt; and &lt;desc&gt;</a></li>
 <li><a href="svg-role-img-title-aria-labelledby-desc-aria-describedby.html">&lt;svg&gt; + role="img", &lt;title&gt; + aria-labelledby, and &lt;desc&gt; + aria-describedby</a></li>
 
+<h2 id="use-case-examples">Complex examples</h2>
+<dl>
+ <dt><a href="svg-access-w3cg.github.io/use-case-examples/composed-tree-links.svg">Composed tree links</a></dt>
+   <dd>A diagram from the shadow DOM specification, of a tree of nodes</dd>
+ <dt><a href="svg-access-w3cg.github.io/use-case-examples/chem-BV-ox.html">Baeyer-Villiger Oxidation</a></dt>
+   <dd>A organic chemical reaction represented semi-graphically</dd>
+</dl>
 </body>
 </html>
