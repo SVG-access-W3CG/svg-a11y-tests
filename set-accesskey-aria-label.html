@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head><title>Animation test - aria-labelledby, accesskey</title>
+</head></body>
+<p>A black circle, with <code>title</code> and <code>aria-label</code> "A circle". Inputting the text 'g' (it isn't clear how, but the common way is to press it) must result in the <code>aria-label</code> being changed to "PASS".</p>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<circle cx="100" cy="100" r="100" aria-label="A circle">
+  <title>A circle</title>
+  <set attributeName="aria-label" to="PASS" begin="accessKey(g)" fill="freeze"/>
+</circle>
+</svg>
+</body></html>

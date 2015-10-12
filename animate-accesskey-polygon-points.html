@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head><title>Animation test - polygon points, accesskey</title>
+</head></body>
+<p>There should be an SVG square. Inputting the text 'g' (it isn't clear how, but the common way is to press it) must result in the square turning into a triangle. It may be necessary to test this visually.</p>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<polygon tabindex="0" id="prettyPoly" points="0 0 0 100 100 100 100 0" transform="translate(50 50)">
+  <title id="initialTitle">A square, with an animation to turn it into a triangle</title>
+  <animate attributeName="points" to="50 0 0 86.6 100 86.6 50 0" begin="accessKey(g)" dur="10s" fill="freeze"/>
+</polygon>
+</svg>
+</body></html>

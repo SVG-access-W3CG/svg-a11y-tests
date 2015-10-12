@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<head><title>Animation test - polygon points, click</title>
+</head></body>
+<p>A black square. Generating a click on the square turns it into a triangle - can this be done other than with a mouse? It may be necessary to test this visually.</p>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<polygon tabindex="0" id="prettyPoly" points="0 0 0 100 100 100 100 0" transform="translate(50 50)">
+  <title id="initialTitle">A square, with an animation to turn it into a triangle</title>
+  <animate attributeName="points" to="50 0 0 86.6 100 86.6 50 0" begin="prettyPoly.click" dur="10s" fill="freeze"/>
+</polygon>
+</svg>
+</body></html>
