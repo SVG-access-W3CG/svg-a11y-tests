@@ -20,35 +20,46 @@
 
 <h3>Basic SVG elements</h3>
 <ul>
-<li><a href="rect.html">&lt;rect&gt;</a></li>
-<li><a href="circle.html">&lt;circle&gt;</a></li>
-<li><a href="ellipse.html">&lt;ellipse&gt;</a></li>
-<li><a href="polygon.html">&lt;polygon&gt;</a></li>
-<li><a href="polyline.html">&lt;polyline&gt;</a></li>
-<li><a href="path.html">&lt;path&gt;</a></li>
-<li><a href="line.html">&lt;line&gt;</a></li>
-<li><a href="title.html">&lt;title&gt;</a></li>
-<li><a href="desc.html">&lt;desc&gt;</a></li>
-<li><a href="rect-title.html">&lt;title&gt; inside &lt;rect&gt;</a></li>
-<li><a href="rect-title-aria-labelledby.html">&lt;title&gt; with aria-labelledby, inside &lt;rect&gt;</a></li>
-<li><a href="rect-role-img-title-aria-labelledby.html">&lt;title&gt; with aria-labelledby, inside &lt;rect&gt; with role="img"</a></li>
-<li><a href="text.html">&lt;text&gt;</a></li>
-<li><a href="text-rotation.html">&lt;text&gt; + rotation</a></li>
+<li><a href="rect.html"><code>&lt;rect&gt;</code></a></li>
+<li><a href="circle.html"><code>&lt;circle&gt;</code></a></li>
+<li><a href="ellipse.html"><code>&lt;ellipse&gt;</code></a></li>
+<li><a href="polygon.html"><code>&lt;polygon&gt;</code></a></li>
+<li><a href="polyline.html"><code>&lt;polyline&gt;</code></a></li>
+<li><a href="path.html"><code>&lt;path&gt;</code></a></li>
+<li><a href="line.html"><code>&lt;line&gt;</code></a></li>
+<li><a href="text.html"><code>&lt;text&gt;</code></a></li>
+<li><a href="text-rotation.html"><code>&lt;text&gt;</code> + rotation</a></li>
+</ul>
+
+<h3><code>title</code> and <code>desc</code> elements</h3>
+<ul>
+<li><a href="title.html"><code>&lt;title&gt;</code></a></li>
+<li><a href="rect-title.html"><code>&lt;title&gt;</code> inside <code>&lt;rect&gt;</code></a></li>
+<li><a href="rect-title-aria-labelledby.html"><code>&lt;title&gt;</code> with <code>aria-labelledby</code>, inside <code>&lt;rect&gt;</code></a></li>
+<li><a href="rect-role-img-title-aria-labelledby.html"><code>&lt;title&gt;</code> with <code>aria-labelledby</code>, inside <code>&lt;rect&gt;</code> with role="img"</a></li>
+<li><a href="title-ul.html"><code>&lt;title&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
+<li><a href="labelledby-title-ul.html"><code>aria-labelledby</code> <code>&lt;title&gt;</code> with <code>&lt;rect&gt;</code> inside</li>
+<li><a href="labelledby-title-foreignObject-ul.html"><code>aria-labelledby</code> <code>&lt;title&gt;</code> containing <code>&lt;foreignObject&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
+<li><a href="desc.html"><code>&lt;desc&gt;</code></a></li>
+<li><a href="desc-text"><code>&lt;desc&gt;</code> with <code>&lt;text&gt;</code> inside</li>
+<li><a href="desc-ul.html"><code>&lt;desc&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
+<li><a href="desc-foreignObject-ul.html"><code>&lt;desc&gt;</code> containing <code>&lt;foreignObject&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
+<li><a href="describedby-desc-foreignObject-ul.html"><code>aria-describedby</code> <code>&lt;desc&gt;</code> containing <code>&lt;foreignObject&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
 </ul>
 
 <h3>Basic <code>&lt;defs&gt;</code> and <code>&lt;use&gt;</code></h3>
 <ul>
-  <li><a href="defs-title-norender.html">&lt;defs&gt; &lt;title&gt; Not Rendered</a></li>
-  <li><a href="defs-labelledby-title-norender.html">&lt;defs&gt; aria-labelledby &lt;title&gt; Not Rendered</a></li>
-  <li><a href="defs-labelledby-title-hidden-norender.html">&lt;defs&gt; aria-labelledby &lt;title&gt; aria-hidden Not Rendered</a></li>
-  <li><a href="use-title">&lt;use&gt; with the &lt;defs&gt; including &lt;title&gt;</a></li>
-  <li><a href="use-title-desc.html">&lt;use&gt; with the &lt;defs&gt; including &lt;title&gt; + &lt;desc&gt;</a></li>
-  <li><a href="use-labelledby-title.html">&lt;use&gt; with the &lt;defs&gt; aria-labelledby &lt;title&gt;</a></li>
-  <li><a href="use-labelledby-title-describedby-desc.html">&lt;use&gt; with the &lt;defs&gt; aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</a></li>
-  <li><a href="use-local-title">&lt;use&gt; element with &lt;title&gt;</a></li>
-  <li><a href="use-local-title-desc.html">&lt;use&gt; element with &lt;title&gt; + &lt;desc&gt;</a></li>
-  <li><a href="use-local-labelledby-title.html">&lt;use&gt; element aria-labelledby &lt;title&gt;</a></li>
-  <li><a href="use-local-labelledby-title-describedby-desc.html">&lt;use&gt; element aria-labelledby &lt;title&gt; aria-describedby &lt;desc&gt;</a></li>
+  <li><a href="defs-title-norender.html"><code>&lt;defs&gt;</code> <code>&lt;title&gt;</code> Not Rendered</a></li>
+  <li><a href="defs-labelledby-title-norender.html"><code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code> Not Rendered</a></li>
+  <li><a href="defs-labelledby-title-hidden-norender.html"><code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code> aria-hidden Not Rendered</a></li>
+  <li><a href="use-title"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> including <code>&lt;title&gt;</code></a></li>
+  <li><a href="use-title-desc.html"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> including <code>&lt;title&gt;</code> + <code>&lt;desc&gt;</code></a></li>
+  <li><a href="use-labelledby-title.html"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code></a></li>
+  <li><a href="use-labelledby-title-describedby-desc.html"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code> <code>aria-describedby</code> <code>&lt;desc&gt;</code></a></li>
+  <li><a href="use-local-title"><code>&lt;use&gt;</code> element with <code>&lt;title&gt;</code></a></li>
+  <li><a href="use-local-title-desc.html"><code>&lt;use&gt;</code> element with <code>&lt;title&gt;</code> + <code>&lt;desc&gt;</code></a></li>
+  <li><a href="use-local-labelledby-title.html"><code>&lt;use&gt;</code> element <code>aria-labelledby</code> <code>&lt;title&gt;</code></a></li>
+  <li><a href="use-local-labelledby-title-describedby-desc.html"><code>&lt;use&gt;</code> element <code>aria-labelledby</code> <code>&lt;title&gt;</code> <code>aria-describedby</code> <code>&lt;desc&gt;</code></a></li>
 </ul>
 
 <h3>SVG animations</h3>
@@ -64,12 +75,12 @@
 
 <h3>With ARIA</h3>
 <ul>
-<li><a href="svg-title-aria-labelledby-desc-aria-describedby.html">&lt;svg&gt;, &lt;title&gt; + aria-labelledby, and &lt;desc&gt; + aria-describedby</a></li>
+<li><a href="svg-title-aria-labelledby-desc-aria-describedby.html"><code>&lt;svg&gt;</code>, <code>&lt;title&gt;</code> + <code>aria-labelledby</code>, and <code>&lt;desc&gt;</code> + <code>aria-describedby</code></a></li>
 
-<li><a href="svg-role-group-title-desc.html">&lt;svg&gt; + role="group", &lt;title&gt; and &lt;desc&gt;</a></li>
-<li><a href="svg-role-group-title-aria-labelledby-desc-aria-describedby.html">&lt;svg&gt; + role="group", &lt;title&gt; + aria-labelledby, and &lt;desc&gt; + aria-describedby</a></li>
-<li><a href="svg-role-img-title-desc.html">&lt;svg&gt; + role="img", &lt;title&gt; and &lt;desc&gt;</a></li>
-<li><a href="svg-role-img-title-aria-labelledby-desc-aria-describedby.html">&lt;svg&gt; + role="img", &lt;title&gt; + aria-labelledby, and &lt;desc&gt; + aria-describedby</a></li>
+<li><a href="svg-role-group-title-desc.html"><code>&lt;svg&gt;</code> + role="group", <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code></a></li>
+<li><a href="svg-role-group-title-aria-labelledby-desc-aria-describedby.html"><code>&lt;svg&gt;</code> + role="group", <code>&lt;title&gt;</code> + <code>aria-labelledby</code>, and <code>&lt;desc&gt;</code> + <code>aria-describedby</code></a></li>
+<li><a href="svg-role-img-title-desc.html"><code>&lt;svg&gt;</code> + role="img", <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code></a></li>
+<li><a href="svg-role-img-title-aria-labelledby-desc-aria-describedby.html"><code>&lt;svg&gt;</code> + role="img", <code>&lt;title&gt;</code> + <code>aria-labelledby</code>, and <code>&lt;desc&gt;</code> + <code>aria-describedby</code></a></li>
 
 <h2 id="use-case-examples">Complex examples</h2>
 <dl>
