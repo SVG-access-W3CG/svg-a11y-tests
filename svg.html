@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Test case: SVG &lt;svg&gt;</title>
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+</head>
+
+<body>
+<h1>Test case: SVG <code>&lt;svg&gt;</code></h1>
+
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/struct.html#NewDocument">SVG <code>&lt;svg&gt;</code> element</a> should implicitly map to the <a href="http://www.w3.org/TR/wai-aria/roles#group">ARIA <code>group</code> role</a>.</p>
+
+<h2>Test example</h2>
+
+<svg width="250" height="100">
+<rect x="0" y="0" width="100%" height="100%" style="fill: #820bbb;" />
+</svg>
+
+<h2>Test criteria</h2>
+
+<ul>
+<li>The browser should map the <code>&lt;svg&gt;</code> element to the <code>group</code> role through the available platform accessibility APIs.</li>
+<li>The screen reader should indicate that the <code>&lt;svg&gt;</code> element represents a group.</li>
+</ul>
+
+<h2>Test results</h2>
+
+<table>
+<caption>Browser test results</caption>
+<tr>
+<th></th>
+<th>Chrome 46 (<abbr title="IAccessible2">IA2</abbr>)</th>
+<th>Edge Win10.1024 (<abbr title="User Interface Automation">UIA</abbr>)</th>
+<th>Firefox 42 (<abbr title="IAccessible2">IA2</abbr>)</th>
+<th>IE 11 (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</th>
+<th>Safari 9 (<abbr title="NS Accessibility Protocol">NSAP</abbr>)</th>
+</tr>
+
+<tr>
+<th><code>&lt;svg&gt;</code></th>
+<td>Fail
+<br>
+Role = section
+</td>
+<td>?</td>
+<td>Fail
+<br>
+Role = diagram
+</td>
+<td>Fail
+<br>
+Role = graphic
+</td>
+<td>?</td>
+</tr>
+</table>
+
+<table>
+<caption>Screen reader test results</caption>
+<tr>
+<th></th>
+<th>Chrome 46</th>
+<th>Edge Win10.1024</th>
+<th>Firefox 42</th>
+<th>IE 11</th>
+<th>Safari 9</th>
+<tr>
+
+<tr>
+<th>Jaws 17</th>
+<td>Fail
+<br>
+SVG not recognised
+</td>
+<td>N/A</td>
+<td>Fail
+<br>
+SVG not recognised
+</td>
+<td>Fail
+<br>
+SVG not recognised
+</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th>Narrator Win10.1024</th>
+<td>N/A</td>
+<td>Partial
+<br>
+Narrator announces "image"
+</td>
+<td>N/A</td>
+<td>Partial
+<br>
+Narrator announces "image"
+</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th>NVDA 2015.4</th>
+<td>Fail
+<br>
+SVG content not recognised
+</td>
+<td>Partial
+<br>
+NVDA announces "graphic"
+</td>
+<td>Fail
+<br>
+SVG not recognised
+</td>
+<td>Fail
+<br>
+SVG not recognised
+</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th>Orca ?</th>
+<td>N/A</td>
+<td>N/A</td>
+<td>?</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+
+<tr>
+<th>VoiceOver OSX10.11</th>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>?</td>
+</tr>
+</table>
+
+</body>
+</html>
