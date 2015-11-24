@@ -1,0 +1,146 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Test case: &lt;rect&gt; + img role</title>
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+</head>
+
+<body>
+<h1>Test case: <code>&lt;rect&gt;</code> + <code>img</code> role</h1>
+
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/shapes.html#RectElement"><code>&lt;rect&gt;</code></a> element and other <a href="http://www.w3.org/TR/SVG2/shapes.html">basic shape elements</a> should implicitly map to the ARIA <a href="http://www.w3.org/TR/wai-aria/roles#img">img role</a>. This test case explicitly applies <code>role="img"</code> to the <code>&lt;rect&gt;</code> element.</p>
+
+<h2>Test examples</h2>
+
+<h3>rect element</h3>
+
+<svg width="250" height="100">
+<title>Rectangle</title>
+<desc>A violet coloured rectangle</desc>
+<rect role="img" tabindex="0" x="0" y="0" width="100%" height="100%" style="fill: #820bbb;" />
+</svg>
+
+<h3>circle element</h3>
+
+<svg width="250" height="100">
+<title>Circle</title>
+<desc>A violet coloured circle</desc>
+<circle role="img" tabindex="0" cx="125" cy="50" r="32.5" style="fill: #820bbb;"  />
+</svg>
+
+<h3>ellipse element</h3>
+
+<svg width="250" height="100">
+<title>Ellipse</title>
+<desc>A violet coloured oval</desc>
+<ellipse role="img" tabindex="0" cx="125" cy="50" rx="50" ry="25" style="fill: #820bbb;"  />
+</svg>
+
+<h3>line element</h3>
+
+<svg width="250" height="100">
+<title>Line</title>
+<desc>A violet coloured line</desc>
+<line role="img" tabindex="0" x1="25" y1="50" x2="225" y2="50" style="stroke: #820bbb; stroke-width: 5;" />
+</svg>
+
+<h3>polyline element</h3>
+
+<svg width="250" height="100">
+<title>Polyline</title>
+<desc>A violet coloured triangle</desc>
+<polyline role="img" tabindex="0" points="125,10 50,80 200,80" style="fill: #820bbb;" />
+</svg>
+
+<h3>polygon element</h3>
+
+<svg width="250" height="100">
+<title>Polygon</title>
+<desc>A violet coloured triangle</desc>
+<polygon role="img" tabindex="0" points="125,10 50,80 200,80" style="fill: #820bbb;" />
+</svg>
+
+<h2>Test criteria</h2>
+
+<ul>
+<li>The browser should map the <code>&lt;rect&gt;</code> element to the <code>img</code> role through the available platform accessibility APIs. Note: depending on the API the browser may expose the shape as either "image" or "graphic".</li>
+<li>The screen reader should indicate that the shape is either a "graphic" or "image".</li>
+</ul>
+
+<h2>Test results</h2>
+
+<table>
+<caption>Browser test results</caption>
+<tr>
+<th></th>
+<th>Chrome 46 (<abbr title="IAccessible2">IA2</abbr>)</th>
+<th>Edge Win10.1024 (<abbr title="User Interface Automation">UIA</abbr>)</th>
+<th>Firefox 42 (<abbr title="IAccessible2">IA2</abbr>)</th>
+<th>IE 11 (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</th>
+<th>Safari 9 (<abbr title="NS Accessibility Protocol">NSAP</abbr>)</th>
+</tr>
+
+<tr>
+<th><code>&lt;rect&gt;</code></th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</table>
+
+<table>
+<caption>Screen reader test results</caption>
+<tr>
+<th></th>
+<th>Chrome 46</th>
+<th>Edge Win10.1024</th>
+<th>Firefox 42</th>
+<th>IE 11</th>
+<th>Safari 9</th>
+</tr>
+
+<tr>
+<th>Jaws 17</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<th>Narrator Win10.1024</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<th>NVDA 2015.4</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<th>VoiceOver OSX10.11</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</table>
+
+</body>
+</html>

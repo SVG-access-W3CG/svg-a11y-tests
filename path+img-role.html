@@ -5,33 +5,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Test case: SVG ***element*** + ARIA ***attribute***</title>
+<title>Test case: &lt;path&gt; + img role</title>
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 </head>
 
 <body>
-<h1>Test case: SVG ***element*** + ARIA ***attribute***</h1>
+<h1>Test case: <code>&lt;path&gt;</code> + <code>img</code> role</h1>
 
-<!-- Test case description -->
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/paths.html#PathElement"><code>&lt;path&gt;</code></a> element should implicitly map to the ARIA <a href="http://www.w3.org/TR/wai-aria/roles#img">img role</a>. This test case explicitly applies <code>role="img"</code> to the <code>&lt;path&gt;</code> element.</p>
 
-<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, ...</p>
+<h2> Test example</h2>
 
-<h2>Test example</h2>
-
-<!-- Test case example(s) -->
-
+<svg width="250" height="100">
+<path role="img" d="m50 25 l200 25 l200 75" style="stroke: #c8a2c8; stroke-fill: 5;" />
+</svg>
 <h2>Test criteria</h2>
 
-<!-- Test criteria -->
-
 <ul>
-<li>Test criteria 1</li>
-<li>Test criteria 2</li>
+<li>The browser should map the <code>&lt;path&gt;</code> element to the <code>img</code> role. Note: depending on the accessibility API the browser may expose the shape as either "image" or "graphic".</li>
+<li>The screen reader should indicate that the shape is either a "graphic" or "image".</li>
 </ul>
 
 <h2>Test results</h2>
-
-<!-- Test results for browsers and screen readers -->
 
 <table>
 <caption>Browser test results</caption>
@@ -45,7 +40,7 @@
 </tr>
 
 <tr>
-<th>***Element/attribute***</th>
+<th><code>&lt;path&gt;</code></th>
 <td>?</td>
 <td>?</td>
 <td>?</td>
@@ -104,3 +99,6 @@
 
 </body>
 </html>
+
+
+</body></html>

@@ -5,19 +5,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Case: &lt;text&gt;</title>
-
+<title>Test case: &lt;text&gt;</title>
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 </head>
 
 <body>
-<h1>Case: <code>&lt;text&gt;</code></h1>
+<h1>Test case: <code>&lt;text&gt;</code></h1>
 
-<p>The <code>&lt;svg&gt;</code> element, containing a <code>&lt;text&gt;</code> element.</p>
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/text.html#TextElement"><code>&lt;text&gt;</code> element should map to the <a href="http://www.w3.org/TR/wai-aria/roles#group"><code>group</code> role</a> with platform accessibility API specific mappings corresponding to the <a href="http://www.w3.org/TR/html-aam-1.0/#el-p">HTML <code>&lt;p&gt;</code> element</a>.</p>
+
+<h2>Test example</h2>
 
 <svg width="250" height="100">
 <text x="50" y="25" style="fill: ##000000; font-size: 2em;">Tequila</text>
 </svg>
+
+<h2>Test criteria</h2>
+
+<ul>
+<li>The browser should map the <code>&lt;text&gt;</code> element to the <code>group</code> role. Note: depending on the accessibility API, the text may be exposed as "paragraph" or "text".</li>
+<li>The screen reader should announce the content of the <code>&lt;text&gt;</code> element.</li>
+</ul>
+
+<h2>Test results</h2>
+
+<!-- Test results for browsers and screen readers -->
+
+<table>
+<caption>Browser test results</caption>
+<tr>
+<th></th>
+<th>Chrome 46 (<abbr title="IAccessible2">IA2</abbr>)</th>
+<th>Edge Win10.1024 (<abbr title="User Interface Automation">UIA</abbr>)</th>
+<th>Firefox 42 (<abbr title="IAccessible2">IA2</abbr>)</th>
+<th>IE 11 (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</th>
+<th>Safari 9 (<abbr title="NS Accessibility Protocol">NSAP</abbr>)</th>
+</tr>
+
+<tr>
+<th><code>&lt;text&gt;</code></th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</table>
+
+<table>
+<caption>Screen reader test results</caption>
+<tr>
+<th></th>
+<th>Chrome 46</th>
+<th>Edge Win10.1024</th>
+<th>Firefox 42</th>
+<th>IE 11</th>
+<th>Safari 9</th>
+</tr>
+
+<tr>
+<th>Jaws 17</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<th>Narrator Win10.1024</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<th>NVDA 2015.4</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+
+<tr>
+<th>VoiceOver OSX10.11</th>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+</tr>
+</table>
 
 </body>
 </html>
