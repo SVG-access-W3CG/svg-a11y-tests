@@ -5,19 +5,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Test case: <code>&lt;title&gt;</code></title>
+<title>Test case: <code>&lt;title&gt;</code> + aria-labelledby</title>
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 </head>
 
 <body>
-<h1>Test case: <code>&lt;title&gt;</code></h1>
+<h1>Test case: <code>&lt;title&gt;</code> + <code>aria-labelledby</code></h1>
 
-<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements">SVG <code>&lt;title&gt;</code> element</a> should provide the accessible name for its parent element.</p>
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements">SVG <code>&lt;title&gt;</code> element</a> should provide the accessible name for its parent element. This test case uses the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby"><code>aria-labelledby</code> attribute</a> to associate the <code>&lt;title&gt;</code> element with its parent.</p>
 
 <h2>Test example</h2>
 
-<svg width="250" height="100">
-<title>Rectangle</title>
+<svg width="250" height="100" aria-labelledby="title">
+<title id="title">Rectangle</title>
 <rect x="0" y="0" width="100%" height="100%" style="fill: #820bbb;" />
 </svg>
 
