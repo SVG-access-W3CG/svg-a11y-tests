@@ -5,14 +5,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Test case: SVG &lt;svg&gt;</title>
+<title>Test case: &lt;svg&gt;</title>
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 </head>
 
 <body>
-<h1>Test case: SVG <code>&lt;svg&gt;</code></h1>
+<h1>Test case: <code>&lt;svg&gt;</code></h1>
 
-<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/struct.html#NewDocument">SVG <code>&lt;svg&gt;</code> element</a> should implicitly map to the <a href="http://www.w3.org/TR/wai-aria/roles#group">ARIA <code>group</code> role</a>.</p>
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/struct.html#NewDocument"><code>&lt;svg&gt;</code> element</a> should implicitly map to the <a href="http://www.w3.org/TR/wai-aria/roles#group">ARIA <code>group</code> role</a>.</p>
 
 <h2>Test example</h2>
 
@@ -24,7 +24,7 @@
 
 <ul>
 <li>The browser should map the <code>&lt;svg&gt;</code> element to the <code>group</code> role through the available platform accessibility APIs.</li>
-<li>The screen reader should indicate that the <code>&lt;svg&gt;</code> element represents a group.</li>
+<li>The screen reader should not announce the <code>&lt;svg&gt;</code> element.</li>
 </ul>
 
 <h2>Test results</h2>
@@ -46,7 +46,10 @@
 <br>
 Role = section
 </td>
-<td>?</td>
+<td>Fail
+<br>
+Role = "image"
+</td>
 <td>Fail
 <br>
 Role = diagram
@@ -72,55 +75,28 @@ Role = graphic
 
 <tr>
 <th>Jaws 17</th>
-<td>Fail
-<br>
-SVG not recognised
-</td>
-<td>N/A</td>
-<td>Fail
-<br>
-SVG not recognised
-</td>
-<td>Fail
-<br>
-SVG not recognised
-</td>
+<td>Pass</td>
+<td>Pass</td>
+<td>Pass</td>
+<td>Pass</td>
 <td>N/A</td>
 </tr>
 
 <tr>
 <th>Narrator Win10.1024</th>
 <td>N/A</td>
-<td>Partial
-<br>
-Narrator announces "image"
-</td>
+<td>Pass</td>
 <td>N/A</td>
-<td>Partial
-<br>
-Narrator announces "image"
-</td>
+<td>Pass</td>
 <td>N/A</td>
 </tr>
 
 <tr>
 <th>NVDA 2015.4</th>
-<td>Fail
-<br>
-SVG content not recognised
-</td>
-<td>Partial
-<br>
-NVDA announces "graphic"
-</td>
-<td>Fail
-<br>
-SVG not recognised
-</td>
-<td>Fail
-<br>
-SVG not recognised
-</td>
+<td>Pass</td>
+<td>Pass</td>
+<td>Pass</td>
+<td>Pass</td>
 <td>N/A</td>
 </tr>
 
@@ -135,13 +111,17 @@ SVG not recognised
 
 <tr>
 <th>VoiceOver OSX10.11</th>
+<td>?</td>
 <td>N/A</td>
-<td>N/A</td>
-<td>N/A</td>
+<td>?</td>
 <td>N/A</td>
 <td>?</td>
 </tr>
 </table>
+
+</body>
+</html>
+
 
 </body>
 </html>
