@@ -42,11 +42,20 @@
 </tr>
 
 <tr>
-<th><code>&lt;desc&gt;</code></th>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<th><code>&lt;desc&gt;</code> + <code>aria-describedby</code></th>
+<td>Fail
+<br>
+<code>&lt;desc&gt;</code> exposed as accessible name
+</td>
+<td>Fail
+<br>
+UIA_describedby property is null
+</td>
+<td>Fail
+<br>
+<code>&lt;desc&gt;</code> exposed as accessible name
+</td>
+<td>Pass</td>
 <td>?</td>
 </tr>
 </table>
@@ -64,17 +73,29 @@
 
 <tr>
 <th>Jaws 17</th>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>Partial
+<br>
+Jaws announces <code>&lt;desc&gt;</code> as accessible name
+</td>
+<td>Fail
+<br>
+Jaws announces "graphic"
+</td>
+<td>Fail
+<br>
+SVG not recognised
+</td>
+<td>Pass</td>
+<td>N/A</td>
 </tr>
 
 <tr>
 <th>Narrator Win10.1024</th>
-<td>?</td>
-<td>?</td>
+<td>N/A</td>
+<td>Fail
+<br>
+Narrator announces "graphic"
+</td>
 <td>?</td>
 <td>?</td>
 <td>?</td>
@@ -82,19 +103,34 @@
 
 <tr>
 <th>NVDA 2015.4</th>
+<td>Pass</td>
+<td>Fail
+<br>
+NVDA announces "image"
+</td>
+<td>Fail
+<br>
+SVG not recognised
+</td>
+<td>Pass</td>
 <td>?</td>
+</tr>
+
+<tr>
+<th>Orca ?</th>
+<td>N/A</td>
+<td>N/A</td>
 <td>?</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>N/A</td>
+<td>N/A</td>
 </tr>
 
 <tr>
 <th>VoiceOver OSX10.11</th>
 <td>?</td>
+<td>N/A</td>
 <td>?</td>
-<td>?</td>
-<td>?</td>
+<td>N/A</td>
 <td>?</td>
 </tr>
 </table>
