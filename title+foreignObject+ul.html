@@ -5,26 +5,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Test case: &lt;path&gt;</title>
+<title>Test case: &lt;title&gt; + &lt;foreignObject&gt; + &lt;ul&gt;</title>
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 </head>
 
 <body>
-<h1>Test case: <code>&lt;path&gt;</code></h1>
+<h1>Test case: <code>&lt;title&gt;</code> + <code>&lt;foreignObject&gt;</code> + <code>&lt;ul&gt;</code></h1>
 
+<p>The <a href="http://www.w3.org/TR/SVG2/embedded.html#ForeignObjectElement"><code>&lt;foreignObject&gt;</code> element</a> permits foreign content such as HTML to be inserted into SVG. The <a href="http://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>&lt;desc&gt;</code> element</a> contains an HTML <a href="http://www.w3.org/TR/html51/semantics.html#the-ul-element"><code>&lt;ul&gt;</code> element</a> within a <code>&lt;foreignObject&gt;</code> element.</p>
 
-<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/paths.html#PathElement"><code>&lt;path&gt;</code></a> element should implicitly map to the ARIA <a href="http://www.w3.org/TR/wai-aria/roles#img">img role</a>.</p>
+<h2>Test example</h2>
 
-<h2> Test example</h2>
-
-<svg width="250" height="100">
-<path d="m50 25 l200 25 l200 75" style="stroke: #c8a2c8; stroke-fill: 5;" />
+<svg width="250" height="400" aria-labelledby="c2title">
+<rect x="0" y="0" width="100%" height="100" style="fill: #c8a2c8;" />
+<circle cx="125" cy="250" r="100" style="fill:#c8a2c8" />
+<title id="c2title"><foreignObject><ul><li>Rectangle, </li><li>Circle</li></ul></foreignObject></title>
 </svg>
+
 <h2>Test criteria</h2>
 
 <ul>
-<li>The browser should map the <code>&lt;path&gt;</code> element to the <code>img</code> role. Note: depending on the accessibility API the browser may expose the shape as either "image" or "graphic".</li>
-<li>The screen reader should indicate the shape is either a "graphic" or "image".</li>
+<li>The browser should...</li>
+<li>The screen reader should...</li>
 </ul>
 
 <h2>Test results</h2>

@@ -5,26 +5,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>Test case: &lt;path&gt;</title>
+<title>Test case: &lt;defs&gt;</title>
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 </head>
 
 <body>
-<h1>Test case: <code>&lt;path&gt;</code></h1>
+<h1>Test case: <code>&lt;defs&gt;</code></h1>
 
+<!-- Test description -->
 
-<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/paths.html#PathElement"><code>&lt;path&gt;</code></a> element should implicitly map to the ARIA <a href="http://www.w3.org/TR/wai-aria/roles#img">img role</a>.</p>
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/struct.html#DefsElement"><code>&lt;defs&gt;</code> element</a> should not map to any role.</p>
 
-<h2> Test example</h2>
+<h2>Test example</h2>
 
+<!-- Test example -->
 <svg width="250" height="100">
-<path d="m50 25 l200 25 l200 75" style="stroke: #c8a2c8; stroke-fill: 5;" />
+<defs>
+ <g id="theRect">
+  <title id="c2title">Rectangle</title>
+  <rect x="0" y="0" width="100%" height="100%" style="fill: #c8a2c8;" />
+  <text x="10" y="70" font-size="40">FAIL</text>
+ </g>
+</defs>
 </svg>
+
 <h2>Test criteria</h2>
 
 <ul>
-<li>The browser should map the <code>&lt;path&gt;</code> element to the <code>img</code> role. Note: depending on the accessibility API the browser may expose the shape as either "image" or "graphic".</li>
-<li>The screen reader should indicate the shape is either a "graphic" or "image".</li>
+<li>The browser should not expose the <code>&lt;defs&gt;</code> element.</li>
+<li>The screen reader should not recognise the SVG content.</li>
 </ul>
 
 <h2>Test results</h2>
