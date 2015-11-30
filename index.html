@@ -5,87 +5,94 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>SVG A11y</title>
-
+<title>SVG A11y test cases</title>
 <link rel="stylesheet" type="text/css" href="css/basic.css">
 </head>
 
 <body>
-<h1>SVG a11y</h1>
+<h1>SVG a11y test cases</h1>
 
 <p>Test cases for SVG accessibility, with and without ARIA.</p>
 
 <h2>Atomic tests</h2>
 <p>Simple tests, of one thing at a time. There are some more complex examples under development in the <a href="http://github.com/SVG-access-W3CG/use-case-examples">use-case-examples</a> repository. The examples that have been improved for accessibility are <a href="#use-case-examples">listed below</a>.</p>
 
-<h3>Basic SVG</h3>
+<h3><code>&lt;svg&gt;</code> tests</h3>
 
 <ul>
 <li><a href="svg.html"><code>&lt;svg&gt;</code></a></li>
 <li><a href="svg+group-role.html"><code>&lt;svg&gt;</code> + group role</a></li>
 </ul>
 
-<h3>Basic SVG elements</h3>
+<h3>Basic SVG element tests</h3>
+
 <ul>
 <li><a href="rect.html"><code>&lt;rect&gt;</code></a></li>
 <li><a href="rect+img-role.html"><code>&lt;rect&gt;</code> + <code>img</code> role</a></li>
 <li><a href="path.html"><code>&lt;path&gt;</code></a></li>
 <li><a href="path+img-role.html"><code>&lt;path&gt;</code> + img role</a></li>
-<li><a href="text.html"><code>&lt;text&gt;</code></a></li>
 </ul>
 
-<h3><code>title</code> and <code>desc</code> elements</h3>
+<h3><code>&lt;text&gt;</code> tests</h3>
+
+<ul>
+<li><a href="text.html"><code>&lt;text&gt;</code></a></li>
+<li><a href="text+aria-labelledby.html"><code>&lt;text&gt;</code> + <code>aria-labelledby</code></a></li>
+<li><a href="text+title.html"><code>&lt;text&gt;</code> + <code>&lt;title&gt;</code></a></li>
+</ul>
+
+<h3><code>&lt;title&gt;</code> tests</h3>
+
 <ul>
 <li><a href="title.html"><code>&lt;title&gt;</code></a></li>
 <li><a href="title+aria-labelledby.html"><code>&lt;title&gt;</code> + <code>aria-labelledby</code></a></li>
+<li><a href="title+aria-labelledby+ul.html"><code>&lt;title&gt;</code> + <code>aria-labelledby</code> + <code>&lt;ul&gt;</code></a></li>
+<li><a href="title+foreignObject+ul.html"><code>&lt;title&gt;</code> + <code>&lt;foreignObject&gt;</code> + <code>&lt;ul&gt;</code></a></li>
+<li><a href="title+ul.html"><code>&lt;title&gt;</code> + <code>&lt;ul&gt;</code></a></li>
+</ul>
+
+<h3><code>&lt;desc&gt;</code> tests</h3>
+
+<ul>
 <li><a href="desc.html"><code>&lt;desc&gt;</code></a></li>
 <li><a href="desc+aria-describedby.html"><code>&lt;desc&gt;</code> + <code>aria-describedby</code></a></li>
-
-<li><a href="title-ul.html"><code>&lt;title&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
-<li><a href="labelledby-title-ul.html"><code>aria-labelledby</code> <code>&lt;title&gt;</code> with <code>&lt;rect&gt;</code> inside</li>
-<li><a href="labelledby-title-foreignObject-ul.html"><code>aria-labelledby</code> <code>&lt;title&gt;</code> containing <code>&lt;foreignObject&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
-<li><a href="desc-text"><code>&lt;desc&gt;</code> with <code>&lt;text&gt;</code> inside</li>
-<li><a href="desc-ul.html"><code>&lt;desc&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
-<li><a href="desc-foreignObject-ul.html"><code>&lt;desc&gt;</code> containing <code>&lt;foreignObject&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
-<li><a href="describedby-desc-foreignObject-ul.html"><code>aria-describedby</code> <code>&lt;desc&gt;</code> containing <code>&lt;foreignObject&gt;</code> with <code>&lt;ul&gt;</code> inside</li>
+<li><a href="desc+foreignObject+ul.html"><code>&lt;desc&gt;</code> + <code>&lt;foreignObject&gt;</code> + <code>&lt;ul&gt;</code></a></li>
+<li><a href="desc+ul.html"><code>&lt;desc&gt;</code> + <code>&lt;ul&gt;</code></a></li>
+<li><a href="desc+ul+aria-describedby.html"><code>&lt;desc&gt;</code> + <code>&lt;ul&gt;</code> + <code>aria-describedby</code></a></li>
 </ul>
 
-<h3>Basic <code>&lt;defs&gt;</code> and <code>&lt;use&gt;</code></h3>
+<h3><code>&lt;defs&gt;</code> tests</h3>
+
 <ul>
-  <li><a href="defs-title-norender.html"><code>&lt;defs&gt;</code> <code>&lt;title&gt;</code> Not Rendered</a></li>
-  <li><a href="defs-labelledby-title-norender.html"><code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code> Not Rendered</a></li>
-  <li><a href="defs-labelledby-title-hidden-norender.html"><code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code> aria-hidden Not Rendered</a></li>
-  <li><a href="use-title"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> including <code>&lt;title&gt;</code></a></li>
-  <li><a href="use-title-desc.html"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> including <code>&lt;title&gt;</code> + <code>&lt;desc&gt;</code></a></li>
-  <li><a href="use-labelledby-title.html"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code></a></li>
-  <li><a href="use-labelledby-title-describedby-desc.html"><code>&lt;use&gt;</code> with the <code>&lt;defs&gt;</code> <code>aria-labelledby</code> <code>&lt;title&gt;</code> <code>aria-describedby</code> <code>&lt;desc&gt;</code></a></li>
-  <li><a href="use-local-title"><code>&lt;use&gt;</code> element with <code>&lt;title&gt;</code></a></li>
-  <li><a href="use-local-title-desc.html"><code>&lt;use&gt;</code> element with <code>&lt;title&gt;</code> + <code>&lt;desc&gt;</code></a></li>
-  <li><a href="use-local-labelledby-title.html"><code>&lt;use&gt;</code> element <code>aria-labelledby</code> <code>&lt;title&gt;</code></a></li>
-  <li><a href="use-local-labelledby-title-describedby-desc.html"><code>&lt;use&gt;</code> element <code>aria-labelledby</code> <code>&lt;title&gt;</code> <code>aria-describedby</code> <code>&lt;desc&gt;</code></a></li>
+<li><a href="defs.html"><code>&lt;defs&gt;</code></a></li>
+<li><a href="defs+aria-hidden.html"><code>&lt;defs&gt;</code> + <code>aria-hidden</code></a></li>
+<li><a href="defs+g+use+aria-describedby.html"><code>&lt;defs&gt;</code> + <code>&lt;g&gt;</code> + <code>&lt;use&gt;</code> + <code>aria-describedby</code></a></li>
+<li><a href="defs+title+aria-labelledby"><code>&lt;defs&gt;</code> + <code>&lt;title&gt;</code> + <code>aria-labelledby</code></a></li>
+<li><a href="defs+use+aria-describedby.html"><code>&lt;defs&gt;</code> + <code>&lt;use&gt;</code> + <code>aria-describedby</code></a></li>
+<li><a href="defs+use+aria-labelledby.html"><code>&lt;defs&gt;</code> + <code>&lt;title&gt;</code> + <code>aria-labelledby</code></a></li>
 </ul>
 
-<h3>SVG animations</h3>
-<p>Note that as of 2015 No version of IE / Edge nor Opera Mini supports animation. Most other implementations, including all the old tiny mobile browsers, do.
+<h3><code>&lt;use&gt;</code> tests</h3>
+
 <ul>
-<li><a href="animate-accesskey-polygon-points.html">animate-accesskey-polygon-points</a></li>
-<li><a href="animate-click-polygon-points.html">animate-click-polygon-points</a></li>
-<li><a href="animate-keydown-polygon-points.html">animate-keydown-polygon-points</a></li>
-<li><a href="set-accesskey-aria-label.html">set-accesskey-aria-label</a></li>
-<li><a href="set-labelledby-defs-title.html">set-labelledby-defs-title</a></li>
-<li><a href="set-use-text-accesskey.html">set-use-text-accesskey</a></li>
+<li><a href="use+desc.html"><code>&lt;;use&gt;</code> + <code>&lt;desc&gt;</code></a></li>
+<li><a href="use+title.html"><code>&lt;use&gt;</code> + <code>&lt;title&gt;</code></a></li>
 </ul>
 
-<h3>With ARIA</h3>
-<ul>
-<li><a href="svg-title-aria-labelledby-desc-aria-describedby.html"><code>&lt;svg&gt;</code>, <code>&lt;title&gt;</code> + <code>aria-labelledby</code>, and <code>&lt;desc&gt;</code> + <code>aria-describedby</code></a></li>
+<h3><code>&lt;animate&gt;</code> tests</h3>
 
-<li><a href="svg-role-group-title-desc.html"><code>&lt;svg&gt;</code> + role="group", <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code></a></li>
-<li><a href="svg-role-group-title-aria-labelledby-desc-aria-describedby.html"><code>&lt;svg&gt;</code> + role="group", <code>&lt;title&gt;</code> + <code>aria-labelledby</code>, and <code>&lt;desc&gt;</code> + <code>aria-describedby</code></a></li>
-<li><a href="svg-role-img-title-desc.html"><code>&lt;svg&gt;</code> + role="img", <code>&lt;title&gt;</code> and <code>&lt;desc&gt;</code></a></li>
-<li><a href="svg-role-img-title-aria-labelledby-desc-aria-describedby.html"><code>&lt;svg&gt;</code> + role="img", <code>&lt;title&gt;</code> + <code>aria-labelledby</code>, and <code>&lt;desc&gt;</code> + <code>aria-describedby</code></a></li>
-<li><a href="labelledby-text.html"><code>&lt;svg&gt;</code> <code>aria-labelledby</code>, a <code>&lt;text&gt;</code> element</a></li>
-<li><a href="title-in-text.html"><code>&lt;svg&gt;</code> with a <code>&lt;title&gt;</code> element inside a <code>&lt;text&gt;</code> element, containing its text content</a></li>
+<ul>
+<li><a href="animate+accesskey.html"><code>&lt;animate&gt;</code> + <code>accesskey</code></a></li>
+<li><a href="animate+click.html"><code>&lt;animate&gt;</code> + click</a></li>
+<li><a href="animate+keydown.html"><code>&lt;animate&gt;</code> + keydown</a></li>
+</ul>
+
+<h3><code>&lt;set&gt;</code> tests</h3>
+
+<ul>
+<li><a href="set+aria-label+accesskey.html"><code>&lt;set&gt;</code> + <code>aria-label</code> + <code>accesskey</code></a></li>
+<li><a href="set+defs+aria-labelledby+accesskey.html"><code>&lt;set&gt;</code> + <code>&lt;defs&gt;</code> + <code>aria-labelledby</code> + <code>accesskey</code></a></li>
+<li><a href="set+use+aria-labelledby+accesskey.html"><code>&lt;set&gt;</code> + <code>&lt;use&gt;</code> + <code>aria-labelledby</code> + <code>accesskey</code></a></li>
 </ul>
 
 <h2 id="use-case-examples">Complex examples</h2>
