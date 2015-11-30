@@ -12,7 +12,7 @@
 <body>
 <h1>Test case: <code>&lt;set&gt;</code> + <code>aria-label</code> + <code>accesskey</code></h1>
 
-<p>The <a href="http://www.w3.org/TR/SVG2/animate.html#SetElement"><code>&lt;set&gt;</code> element</a> enables an attribute value to be set for a specified duration.</p>
+<p>This test case uses the <a href="http://www.w3.org/TR/SVG2/animate.html#SetElement"><code>&lt;set&gt;</code> element</a> to change the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-label"><code>aria-label</code> attribute</a> of the <code>&lt;circle&gt;</code> element when an <code>accesskey</code> is used.</p>
 
 <h2>Test example</h2>
 
@@ -29,6 +29,7 @@
 <li>The browser should expose the <code>accesskey</code> on the SVG <code>&lt;circle&gt;</code> element.</li>
 <li>When triggered with the accesskey g, the <code>aria-label</code> for the <code>&lt;circle&gt;</code> element should change to "Pass".</li>
 <li>The browser should expose "A circle" as the initial accessible name for the <code>&lt;circle&gt;</code> element, then "Pass" once the accesskey has been triggered.</li>
+<li>The screen reader should announce that the <code>accesskey</code> is present.</li>
 <li>The screen reader should announce "A circle" as the accessible name for the <code>&lt;circle&gt;</code> element, then "Pass" once the accesskey has been triggered.</li>
 </ul>
 
