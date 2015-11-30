@@ -12,9 +12,8 @@
 <body>
 <h1>Test case: <code>&lt;defs&gt;</code> + <code>&lt;use&gt;</code> + <code>aria-describedby</code></h1>
 
-<p>The <code>&lt;svg&gt;</code> element defines a group containing a  a <code>&lt;rect&gt;</code> in a <code>&lt;defs&gt;</code> element. The rectangle is then incorporated into the document with a <code>&lt;use&gt;</code> element containing a <code>&lt;title&gt;</code>, and a <code>&lt;desc&gt;</code>, explicitly associated to the <code>&lt;use&gt;</code> with <code>aria-labelledby</code> and <code>aria-describedby</code> attributes, respectively.</p>
 
-<p>For a user agent to pass this test, it must be possible to navigate to the rectangle and discover the title, which is "Rectangle", and to get the description, which is "A lilac rectangle".</p>
+<p>The <a href="http://www.w3.org/TR/SVG2/struct.html#DefsElement"><code>&lt;defs&gt;</code> element</a> should not be exposed by the browser. The <a href="http://www.w3.org/TR/SVG2/struct.html#UseElement"><code>&lt;use&gt;</code> element clones content defined within the <code>&lt;defs&gt;</code> element. The <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby"><code>aria-labelledby</code> attribute</a> provides an accessible name for the element it is associated with, and the <a href="http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby"><code>aria--describedby</code> attribute</a> provides an accessible description for the element it is associated with.</p> 
 
 <h2>Test example</h2>
 
@@ -32,8 +31,8 @@
 <h2>Test criteria</h2>
 
 <ul>
-<li>The browser should...</li>
-<li>The screen reader should...</li>
+<li>The browser should expose "Rectangle" as the accessible name for the rectangle, and "A lilac rectangle" as the accessible description.</li>
+<li>The screen reader should announce "Rectangle" as the accessible name for the rectangle, and "A lilac coloured rectangle" as the accessible description.</li>
 </ul>
 
 <h2>Test results</h2>
