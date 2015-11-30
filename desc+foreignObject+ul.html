@@ -12,9 +12,7 @@
 <body>
 <h1>Test case: <code>&lt;desc&gt;</code> + <code>&lt;foreignObject&gt;</code> + &lt;ul&gt;</code></h1>
 
-<!-- Test description -->
-
-<p>The <a href="http://www.w3.org/TR/SVG2/embedded.html#ForeignObjectElement"><code>&lt;foreignObject&gt;</code> element</a> permits foreign content such as HTML to be inserted into SVG. The <a href="http://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements"><code>&lt;desc&gt;</code> element</a> contains an HTML <a href="http://www.w3.org/TR/html51/semantics.html#the-ul-element"><code>&lt;ul&gt;</code> element</a> within a <code>&lt;foreignObject&gt;</code> element.</p>
+<p>According to the <a href="http://www.w3.org/TR/svg-aam-1.0/">SVG Accessibility API Mappings (AAM)</a>, the <a href="http://www.w3.org/TR/SVG2/struct.html#DescriptionAndTitleElements">SVG <code>&lt;desc&gt;</code> element</a> should provide the accessible description for its parent element. The <a href="http://www.w3.org/TR/SVG2/embedded.html#ForeignObjectElement"><code>&lt;foreignObject&gt;</code> element</a> enables HTML content like the <a href="http://www.w3.org/TR/html5/grouping-content.html#the-ul-element"><code>&lt;ul&gt;</code> element</a> to be contained within the <code>&lt;desc&gt;</code> element.</p>
 
 <h2>Test example</h2>
 
@@ -33,8 +31,9 @@
 <h2>Test criteria</h2>
 
 <ul>
-<li>The browser should...</li>
-<li>The screen reader should...</li>
+<li>The browser should expose the <code>&lt;desc&gt;</code> as the accessible description for the rectangle.</li>
+<li>The browser should expose the <code>&lt;ul&gt;</code> semantics.</li>
+<li>The screen reader should announce the <code>&lt;ul&gt;</code> semantics as part of the rectangle's accessible description.</li>
 </ul>
 
 <h2>Test results</h2>
