@@ -70,3 +70,40 @@ code
     margin-bottom: 2em;
 }
 
+
+table
+{
+    max-width:100%;
+    background-color:transparent;
+    width:100%;
+    margin-bottom:20px;
+}
+
+th
+{
+    text-align:left;
+    background-color:#ddd;
+    font-weight:700;
+}
+
+td,th
+{
+    padding:8px;
+    line-height:1.42857;
+    vertical-align:top;
+    border: 1px solid #ccc;
+}
+
+tr:nth-child(even)
+{
+    background-color:#efefef
+}
+
+
+caption {
+    font-size: 1.2em;
+}
+
+table {
+    border-collapse: collapse;
+}

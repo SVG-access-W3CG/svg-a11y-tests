@@ -37,51 +37,44 @@
 <!-- Test results for browsers and screen readers -->
 
 <table>
-<caption>Windows browser test results</caption>
-<tr>
-<th></th>
-<th>Chrome 47 (<abbr title="IAccessible2">IA2</abbr>)</th>
-<th>Edge Win10.1024 (<abbr title="User Interface Automation">UIA</abbr>)</th>
-<th>Firefox 43 (<abbr title="IAccessible2">IA2</abbr>)</th>
-<th>IE 11 (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</th>
-</tr>
+    <caption>Windows browser test results</caption>
+    <tr>
+        <th></th>
+        <th>Chrome 47 (<abbr title="IAccessible2">IA2</abbr>)</th>
+        <th>Edge Win10.1024 (<abbr title="User Interface Automation">UIA</abbr>)</th>
+        <th>Firefox 43 (<abbr title="IAccessible2">IA2</abbr>)</th>
+        <th>IE 11 (<abbr title="Microsoft Active Accessibility">MSAA</abbr>)</th>
+    </tr>
 
-<tr>
-<th><code>&lt;rect&gt;</code> + <code>tabindex="1"</code></th>
-<td>Pass</td>
-<td>Fail</td>
-<td>Fail</td>
-<td>Fail</td>
-</tr>
+    <tr>
+        <th><code>&lt;rect&gt;</code> + <code>tabindex="1"</code></th>
+        <td>Pass</td>
+        <td>Fail</td>
+        <td>Fail</td>
+        <td>Fail</td>
+    </tr>
 </table>
 
 <table>
-<caption>OSX browser test results</caption>
-<tr>
-<th>
-<th></th>
-<th>Chrome 47 (<abbr title="IAccessible2">IA2</abbr>)</th>
-<th>Firefox 43 (<abbr title="IAccessible2">IA2</abbr>)</th>
-<th>Safari 9 (<abbr title="NS Accessibility Protocol">NSAP</abbr>)</th>
-</tr>
+    <caption>OSX browser test results</caption>
+    <tr>
+        <th></th>
+        <th>Chrome 47 (<abbr title="IAccessible2">IA2</abbr>)</th>
+        <th>Firefox 43 (<abbr title="IAccessible2">IA2</abbr>)</th>
+        <th>Safari 9 (<abbr title="NS Accessibility Protocol">NSAP</abbr>)</th>
+    </tr>
 
-<tr>
-<th><code>&lt;rect&gt;</code> + <code>tabindex="1"</code></th>
-<td>Partial
-<br>
-Tab navigation not supported, only left/right cursor navigation
-</td>
-<td>Partial
-<br>
-Tab navigation not supported, only left/right cursor navigation
-<br>
-<code>&lt;rect&gt;</code> treated as discrete focus stop with left/right cursor navigation
-</td>
-<td>Partial
-<br>
-Tab navigation not supported, only left/right cursor
-</td>
-</tr>
+    <tr>
+        <th><code>&lt;rect&gt;</code> + <code>tabindex="1"</code></th>
+        <td>Pass</td>
+        <td>Partial
+        <br>
+        Tab navigation not supported, only left/right cursor navigation
+        <br>
+        <code>&lt;rect&gt;</code> treated as discrete focus stop with left/right cursor navigation
+        </td>
+        <td>Pass</td>
+    </tr>
 </table>
 
 </body>

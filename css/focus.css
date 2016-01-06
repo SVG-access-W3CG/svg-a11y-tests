@@ -3,7 +3,7 @@ rect
 fill: #820bbb;
 }
 
-rect:hover, rect:focus
+rect:hover, rect:focus, a:hover rect, a:focus rect
 {
 stroke: #000000;
 stroke-width: 5;
