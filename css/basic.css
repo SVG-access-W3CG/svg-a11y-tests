@@ -70,13 +70,3 @@ code
     margin-bottom: 2em;
 }
 
-table {
-    min-width: 90%;
-    border-collapse: collapse;
-    border: 1px solid #888;
-}
-
-th, td {
-    padding: 5px 10px;
-    border: 1px solid #888;
-}
